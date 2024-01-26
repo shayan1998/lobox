@@ -1,0 +1,58 @@
+@import "../../style/variables";
+
+.dropDownSelect {
+  position: relative;
+  input {
+    border: unset;
+    padding: 10px;
+    border-radius: 10px;
+    width: 360px;
+    border: 1px solid rgba($primary, 0.8);
+
+    &:focus {
+      outline: 3px solid rgba($primary, 0.3);
+    }
+  }
+
+  .dropDown {
+    z-index: 100;
+    background: $white;
+    position: absolute;
+    border: 1px solid $grey;
+    box-shadow: 0px 0px 10px $grey;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 8px;
+    max-height: $dropDownMaxHeight;
+    padding: 10px;
+    overflow-y: scroll;
+
+    &Item {
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      padding: 6px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #00000090;
+      transition: all 0.4s;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &Active {
+        background: rgba($primary, 0.1);
+        color: $primary;
+      }
+      &PreSelect {
+        background: rgba($primary, 0.04);
+        color: $primary;
+      }
+    }
+  }
+}
